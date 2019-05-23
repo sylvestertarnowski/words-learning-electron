@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import * as React from "react";
 import GuessWords from "./GuessWords";
 import PostWords from "./PostWords";
 
@@ -12,14 +12,14 @@ type S = {
 
 type P = any;
 
-class Words extends Component<P, S> {
+class Words extends React.Component<P, S> {
     readonly state = {
         word: "",
         translation: "",
         wordsList: [],
         list: [],
         deleteReqResponse: ""
-    }
+    } as S;
     constructor(props: P) {
         super(props);
     }
